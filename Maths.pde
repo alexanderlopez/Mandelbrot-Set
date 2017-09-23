@@ -29,9 +29,9 @@ public class Maths
         break;
     }
     
-    pixCol = color(map(iterations,1,maxIterations,0,255));
+    pixCol = color(map(iterations,1,maxIterations,0,255),255,255);
     if (iterations == maxIterations)
-      pixCol = color(0);
+      pixCol = color(0,0,0);
       
     return pixCol;
   }
