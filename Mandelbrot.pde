@@ -12,7 +12,6 @@ void setup()
   mandelbrot = new Maths(100);
   interval = (2*xScale)/width;
   buffer = createImage(width,height,RGB);
-  colorMode(HSB);
   render();
 }
 
@@ -38,7 +37,7 @@ void draw()
   double x = (mouseX-(width/2))*interval + centerX;
   double y = (mouseY-(height/2))*-1*interval + centerY;
   
-  fill(0,0,0);
+  fill(0,255,0);
   text("Center: " + centerX + "+" + centerY + "i",10,15);
   text("Mouse: " + x + "+" + y + "i", 10,height-15);
   text("Iterations: " + mandelbrot.maxIterations(), 10,30);
